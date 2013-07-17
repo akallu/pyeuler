@@ -20,13 +20,6 @@ def main():
 def g(n):
   return n**4 + (-9*n**3) + (27*n**2) + (-30*n) + 9
 
-def factorial(n):
-  num = 1
-  for i in xrange(2, n+1):
-    num *= i
-  return num
-
-
 # Standard boilerplate to call the main() function.
 if __name__ == '__main__':
   main()

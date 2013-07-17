@@ -12,6 +12,15 @@ def get_primes(n):
             sieve[(k*k+4*k-2*k*(i&1))/3::2*k] = False
     return np.r_[2,3,((3*np.nonzero(sieve)[0]+1)|1)].tolist()
 
+#return a list of all fibonacci's below n
+def get_fibs(n):
+  a, b = 0, 1
+  fibs = [b]
+  while b < n:
+    a, b = b, a+b
+    fibs.append(b)
+  return fibs
+
 def factorialMod(n, modulus):
     ans=1
     if n <= modulus//2:
